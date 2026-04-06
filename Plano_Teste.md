@@ -24,8 +24,3 @@ test005: Validação de número com Simbolos
 entrada: 1@
 retorno_esperado: que exiba uma mensagem de erro sem travar o sistema
 resultado: Mensagem de erro como o esperado e nenhum travamento do sistema
-
-test006:
-entrada: 
-retorno_esperado:
-resultado: 
