@@ -1,0 +1,24 @@
+test001: Validação com credenciais corretas (Caminho Feliz / Exposição do Bug)
+entrada: Usuário: admin | Senha: 12345
+retorno_esperado: Acesso Concedido! Bem-vindo, Administrador.
+resultado: Falha crítica, o sistema recusa o acesso correto devido ao uso do operador == na verificação da String do usuário
+
+test002: Validação de login com usuário incorreto
+entrada: Usuário: visitante | Senha: 12345
+retorno_esperado: Erro: Usuário ou senha incorretos.
+resultado: Erro: Usuário ou senha incorretos. (Comportamento esperado do sistema).
+
+test003: Validação de login com senha incorreta
+entrada: Usuário: admin | Senha: senhaerrada
+retorno_esperado: Erro: Usuário ou senha incorretos.
+resultado: Erro: Usuário ou senha incorretos. (Comportamento esperado do sistema).
+
+test004: Validação com campos completamente vazios (Apertar Enter direto)
+entrada: Usuário:   (vazio) | Senha:   (vazio)
+retorno_esperado: O sistema deveria informar que os campos são obrigatórios ou retornar. Erro: Usuário ou senha incorretos.
+resultado:Usuário ou senha incorretos. (Comportamento esperado, porém evidencia a ausência de uma validação amigável de campos vazios).
+
+test005: Validação de sensibilidade a maiúsculas (Case Sensitivity)
+entrada: Usuário: Admin (com 'A' maiúsculo) | Senha: 12345
+retorno_esperado: Erro: Usuário ou senha incorretos.
+resultado: Erro: Usuário ou senha incorretos. (Comportamento esperado, o Java diferencia maiúsculas de minúsculas e o código não trata isso de forma ignorada).
