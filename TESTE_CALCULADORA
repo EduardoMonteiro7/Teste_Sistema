@@ -1,0 +1,29 @@
+test001: Validação de operação bem-sucedida ( Soma )
+--------------------------------------------------------------------------------------------------------------------------
+entrada: 1 | Primeiro número: 10 | Segundo número: 5
+retorno_esperado: O sistema deve calcular a soma e exibir Resultado: 15.0.
+resultado: 15.0 ,Comportamento esperado. O cálculo ocorreu perfeitamente.
+
+test002: Validação de divisão por zero
+--------------------------------------------------------------------------------------------------------------------------
+entrada: 4 | Primeiro número: 10 | Segundo número: 0
+retorno_esperado: O sistema deve exibir Erro: divisão por zero! e encerrar sem travar.
+resultado: Erro,divisão por zero.
+
+test003: Validação de opção de menu inválida
+--------------------------------------------------------------------------------------------------------------------------
+entrada: 9 | Primeiro número: 10 | Segundo número: 5
+retorno_esperado: O sistema deve exibir Opção inválida! e encerrar.
+resultado: Opção inválida. Comportamento esperado do ponto de vista de tratamento.
+
+test004: Validação de entrada com tipo de dado incorreto (Letras em vez de números)
+--------------------------------------------------------------------------------------------------------------------------
+entrada: a
+retorno_esperado: O sistema deveria informar "Entrada inválida, digite apenas números" e pedir novamente ou encerrar de forma amigável.
+resultado: O sistema trava e exibe um erro técnico vermelho no console.
+
+test005: Validação de formatação de números decimais (Ponto vs Vírgula)
+--------------------------------------------------------------------------------------------------------------------------
+entrada: 1 | Primeiro número: 2.5 (usando ponto) em um sistema configurado em Português-BR.
+retorno_esperado: O sistema deve aceitar o número e processar o cálculo.
+resultado: Pode gerar o erro InputMismatchException e travar o sistema.
